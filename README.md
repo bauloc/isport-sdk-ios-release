@@ -4,7 +4,7 @@
 
 WISDK is available through CocoaPods. To install it, simply add the following line to your Podfile: 
 
-```
+```sh
 $ pod 'ISPORTSDK', 'X.X.X'
 ```
 where X.X.X is your preferred version.
@@ -14,9 +14,10 @@ Latest released version to to CocoaPods is 1.0.0
 ```
 
 <b>Usage</b>
+
 Swift Code
 
-```
+```swift
 override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -34,7 +35,7 @@ override func viewDidLoad() {
 
     }
 
-    ISPORTSDK.onUserLogin = {
+    ISPORTSDK.onUserPurchase = {
 
     }
 
