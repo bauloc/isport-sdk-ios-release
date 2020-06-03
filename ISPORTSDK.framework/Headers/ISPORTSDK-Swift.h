@@ -238,13 +238,13 @@ SWIFT_CLASS("_TtC9ISPORTSDK10ISportData")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, Environment, closed) {
+typedef SWIFT_ENUM(NSInteger, Environment, open) {
   EnvironmentDEV = 0,
   EnvironmentSTAGING = 1,
   EnvironmentPRODUCTION = 2,
 };
 
-typedef SWIFT_ENUM(NSInteger, ViewType, closed) {
+typedef SWIFT_ENUM(NSInteger, ViewType, open) {
   ViewTypeHOME = 0,
   ViewTypeDETAIL = 1,
 };
@@ -525,13 +525,13 @@ SWIFT_CLASS("_TtC9ISPORTSDK10ISportData")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, Environment, closed) {
+typedef SWIFT_ENUM(NSInteger, Environment, open) {
   EnvironmentDEV = 0,
   EnvironmentSTAGING = 1,
   EnvironmentPRODUCTION = 2,
 };
 
-typedef SWIFT_ENUM(NSInteger, ViewType, closed) {
+typedef SWIFT_ENUM(NSInteger, ViewType, open) {
   ViewTypeHOME = 0,
   ViewTypeDETAIL = 1,
 };
