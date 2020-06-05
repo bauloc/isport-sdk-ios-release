@@ -35,7 +35,7 @@ import WebKit
   @objc deinit
 }
 @objc public class ISportData : ObjectiveC.NSObject {
-  @objc public init(matchId: Swift.String?, token: Swift.String?, type: ISPORTSDK.ISportData.ViewType = ViewType.DETAIL, env: ISPORTSDK.ISportData.Environment = Environment.PRODUCTION, debug: Swift.Bool = false)
+  @objc public init(matchId: Swift.String?, token: Swift.String?, type: ISPORTSDK.ISportData.ViewType = ISportData.ViewType.DETAIL, env: ISPORTSDK.ISportData.Environment = ISportData.Environment.PRODUCTION, debug: Swift.Bool = false)
   @objc public enum Environment : Swift.Int, Swift.RawRepresentable {
     case DEV, STAGING, PRODUCTION
     public typealias RawValue = Swift.String
