@@ -12,8 +12,6 @@ import WebKit
   public func injectJavascript(javascript: Swift.String)
   @objc open func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
   @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
-  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
   @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
   @objc public func webView(_ webView: WebKit.WKWebView, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
   @objc public func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
@@ -22,7 +20,7 @@ import WebKit
 }
 @objc public class ISportWebAction : ObjectiveC.NSObject {
   public enum TypeAction : Swift.String {
-    case USER_LOGIN, USER_PURCHASE, UNKNOWN
+    case USER_LOGIN, USER_PURCHASE, USER_EXCHANGE_LOYALTY, USER_START_LIVE_DETAIL, UNKNOWN
     public typealias RawValue = Swift.String
     public init?(rawValue: Swift.String)
     public var rawValue: Swift.String {
@@ -59,10 +57,15 @@ import WebKit
   @objc public static var onTimeout: (() -> ())?
   @objc public static var onError: (() -> ())?
   @objc public static var onUserLogin: (() -> ())?
-  @objc public static var onUserPurchase: (() -> ())?
+  @objc public static var onUserPurchase: ((Swift.String) -> ())?
+  @objc public static var onUserExchangeLoyalty: ((Swift.UInt32) -> ())?
+  @objc public static var onUserStartLiveDetail: ((Swift.String) -> ())?
   @objc public static func addISportView(container: UIKit.UIView!, frame: CoreGraphics.CGRect, data: ISPORTSDK.ISportData!)
   @objc public static func setFrame(frame: CoreGraphics.CGRect)
-  @objc public static func onUserPurchaseSuccess(token: Swift.String, packageId: Swift.String)
+  @objc public static func onUserPurchaseSuccess()
+  @objc public static func onUserPurchaseFailed()
+  @objc public static func onUserExchangeLoyaltySuccess()
+  @objc public static func onUserExchangeLoyaltyFailed()
   @objc deinit
   @objc override dynamic public init()
 }
