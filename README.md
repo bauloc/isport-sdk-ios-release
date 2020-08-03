@@ -10,7 +10,7 @@ $ pod 'ISPORTSDK', 'X.X.X'
 where X.X.X is your preferred version.
 
 ```
-Latest released version to to CocoaPods is 1.0.4
+Latest released version to to CocoaPods is 1.2.1
 ```
 
 <b>Usage</b>
@@ -32,12 +32,24 @@ override func viewDidLoad() {
 
 
     ISPORTSDK.onUserLogin = {
+            
+    }
+
+    ISPORTSDK.onUserPurchase = { (packageId) in
+        print("====onUserPurchase: \(packageId)")
 
     }
 
-    ISPORTSDK.onUserPurchase = {
+    //Call when Purchase success
+    ISPORTSDK.onUserPurchaseSuccess()
 
+    //Call when Purchase failed
+    ISPORTSDK.onUserPurchaseFailed()
+
+    ISPORTSDK.onUserStartLiveDetail = { (channelId) in
+        print("====onUserStartLiveDetail: \(channelId)")
     }
+        
 
     ISPORTSDK.addISportView(container: view, frame: view.frame, data: data)
 }
