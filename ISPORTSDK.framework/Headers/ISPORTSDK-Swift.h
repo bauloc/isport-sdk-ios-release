@@ -226,6 +226,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onErro
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserLogin)(void);)
 + (void (^ _Nullable)(void))onUserLogin SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserLogin:(void (^ _Nullable)(void))value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onDismiss)(void);)
++ (void (^ _Nullable)(void))onDismiss SWIFT_WARN_UNUSED_RESULT;
++ (void)setOnDismiss:(void (^ _Nullable)(void))value;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserPurchase)(NSString * _Nonnull);)
 + (void (^ _Nullable)(NSString * _Nonnull))onUserPurchase SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserPurchase:(void (^ _Nullable)(NSString * _Nonnull))value;
@@ -525,6 +528,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onErro
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserLogin)(void);)
 + (void (^ _Nullable)(void))onUserLogin SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserLogin:(void (^ _Nullable)(void))value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onDismiss)(void);)
++ (void (^ _Nullable)(void))onDismiss SWIFT_WARN_UNUSED_RESULT;
++ (void)setOnDismiss:(void (^ _Nullable)(void))value;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserPurchase)(NSString * _Nonnull);)
 + (void (^ _Nullable)(NSString * _Nonnull))onUserPurchase SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserPurchase:(void (^ _Nullable)(NSString * _Nonnull))value;
@@ -827,6 +833,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onErro
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserLogin)(void);)
 + (void (^ _Nullable)(void))onUserLogin SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserLogin:(void (^ _Nullable)(void))value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onDismiss)(void);)
++ (void (^ _Nullable)(void))onDismiss SWIFT_WARN_UNUSED_RESULT;
++ (void)setOnDismiss:(void (^ _Nullable)(void))value;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserPurchase)(NSString * _Nonnull);)
 + (void (^ _Nullable)(NSString * _Nonnull))onUserPurchase SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserPurchase:(void (^ _Nullable)(NSString * _Nonnull))value;
@@ -1126,6 +1135,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onErro
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserLogin)(void);)
 + (void (^ _Nullable)(void))onUserLogin SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserLogin:(void (^ _Nullable)(void))value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onDismiss)(void);)
++ (void (^ _Nullable)(void))onDismiss SWIFT_WARN_UNUSED_RESULT;
++ (void)setOnDismiss:(void (^ _Nullable)(void))value;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserPurchase)(NSString * _Nonnull);)
 + (void (^ _Nullable)(NSString * _Nonnull))onUserPurchase SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserPurchase:(void (^ _Nullable)(NSString * _Nonnull))value;

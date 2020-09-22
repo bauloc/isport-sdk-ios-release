@@ -20,7 +20,7 @@ import WebKit
 }
 @objc public class ISportWebAction : ObjectiveC.NSObject {
   public enum TypeAction : Swift.String {
-    case USER_LOGIN, USER_PURCHASE, USER_EXCHANGE_LOYALTY, USER_START_LIVE_DETAIL, UNKNOWN
+    case USER_LOGIN, USER_PURCHASE, USER_EXCHANGE_LOYALTY, USER_START_LIVE_DETAIL, USER_DISMISS, UNKNOWN
     public typealias RawValue = Swift.String
     public init?(rawValue: Swift.String)
     public var rawValue: Swift.String {
@@ -57,6 +57,7 @@ import WebKit
   @objc public static var onTimeout: (() -> ())?
   @objc public static var onError: (() -> ())?
   @objc public static var onUserLogin: (() -> ())?
+  @objc public static var onDismiss: (() -> ())?
   @objc public static var onUserPurchase: ((Swift.String) -> ())?
   @objc public static var onUserExchangeLoyalty: ((Swift.UInt32) -> ())?
   @objc public static var onUserStartLiveDetail: ((Swift.String) -> ())?
