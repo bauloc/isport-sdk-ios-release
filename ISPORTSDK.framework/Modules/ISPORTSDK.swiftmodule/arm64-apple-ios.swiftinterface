@@ -67,6 +67,7 @@ import WebKit
   @objc public static func onUserPurchaseFailed()
   @objc public static func onUserExchangeLoyaltySuccess()
   @objc public static func onUserExchangeLoyaltyFailed()
+  @objc public static func removeOverlays()
   @objc deinit
   @objc override dynamic public init()
 }

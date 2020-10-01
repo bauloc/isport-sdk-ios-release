@@ -244,6 +244,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUser
 + (void)onUserPurchaseFailed;
 + (void)onUserExchangeLoyaltySuccess;
 + (void)onUserExchangeLoyaltyFailed;
++ (void)removeOverlays;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -546,6 +547,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUser
 + (void)onUserPurchaseFailed;
 + (void)onUserExchangeLoyaltySuccess;
 + (void)onUserExchangeLoyaltyFailed;
++ (void)removeOverlays;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -851,6 +853,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUser
 + (void)onUserPurchaseFailed;
 + (void)onUserExchangeLoyaltySuccess;
 + (void)onUserExchangeLoyaltyFailed;
++ (void)removeOverlays;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1153,6 +1156,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUser
 + (void)onUserPurchaseFailed;
 + (void)onUserExchangeLoyaltySuccess;
 + (void)onUserExchangeLoyaltyFailed;
++ (void)removeOverlays;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
