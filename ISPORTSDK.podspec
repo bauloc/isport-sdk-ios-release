@@ -1,8 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ISPORTSDK"
-  #spec.version      = ENV['LIB_VERSION'] || "0.0.1"
-  spec.version      = "1.3.1"
+  spec.version      = ENV['LIB_VERSION'] || "0.0.1"
 
   spec.summary      = "ISport Sdk iOS"
 
