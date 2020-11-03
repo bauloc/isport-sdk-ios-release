@@ -238,8 +238,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUser
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserStartLiveDetail)(NSString * _Nonnull);)
 + (void (^ _Nullable)(NSString * _Nonnull))onUserStartLiveDetail SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserStartLiveDetail:(void (^ _Nullable)(NSString * _Nonnull))value;
-+ (void)addISportViewWithContainer:(UIView * _Null_unspecified)container frame:(CGRect)frame data:(ISportData * _Null_unspecified)data;
-+ (void)setFrameWithFrame:(CGRect)frame;
++ (void)addISportViewWithContainer:(UIView * _Null_unspecified)container data:(ISportData * _Null_unspecified)data;
 + (void)onUserPurchaseSuccess;
 + (void)onUserPurchaseFailed;
 + (void)onUserExchangeLoyaltySuccess;
@@ -282,7 +281,7 @@ typedef SWIFT_ENUM(NSInteger, ViewType, open) {
 
 SWIFT_CLASS("_TtC9ISPORTSDK10ISportView")
 @interface ISportView : UIView <WKNavigationDelegate, WKScriptMessageHandler, WKUIDelegate>
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
@@ -545,8 +544,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUser
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserStartLiveDetail)(NSString * _Nonnull);)
 + (void (^ _Nullable)(NSString * _Nonnull))onUserStartLiveDetail SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserStartLiveDetail:(void (^ _Nullable)(NSString * _Nonnull))value;
-+ (void)addISportViewWithContainer:(UIView * _Null_unspecified)container frame:(CGRect)frame data:(ISportData * _Null_unspecified)data;
-+ (void)setFrameWithFrame:(CGRect)frame;
++ (void)addISportViewWithContainer:(UIView * _Null_unspecified)container data:(ISportData * _Null_unspecified)data;
 + (void)onUserPurchaseSuccess;
 + (void)onUserPurchaseFailed;
 + (void)onUserExchangeLoyaltySuccess;
@@ -589,7 +587,7 @@ typedef SWIFT_ENUM(NSInteger, ViewType, open) {
 
 SWIFT_CLASS("_TtC9ISPORTSDK10ISportView")
 @interface ISportView : UIView <WKNavigationDelegate, WKScriptMessageHandler, WKUIDelegate>
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
@@ -851,8 +849,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUser
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) void (^ _Nullable onUserStartLiveDetail)(NSString * _Nonnull);)
 + (void (^ _Nullable)(NSString * _Nonnull))onUserStartLiveDetail SWIFT_WARN_UNUSED_RESULT;
 + (void)setOnUserStartLiveDetail:(void (^ _Nullable)(NSString * _Nonnull))value;
-+ (void)addISportViewWithContainer:(UIView * _Null_unspecified)container frame:(CGRect)frame data:(ISportData * _Null_unspecified)data;
-+ (void)setFrameWithFrame:(CGRect)frame;
++ (void)addISportViewWithContainer:(UIView * _Null_unspecified)container data:(ISportData * _Null_unspecified)data;
 + (void)onUserPurchaseSuccess;
 + (void)onUserPurchaseFailed;
 + (void)onUserExchangeLoyaltySuccess;
@@ -895,7 +892,7 @@ typedef SWIFT_ENUM(NSInteger, ViewType, open) {
 
 SWIFT_CLASS("_TtC9ISPORTSDK10ISportView")
 @interface ISportView : UIView <WKNavigationDelegate, WKScriptMessageHandler, WKUIDelegate>
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;

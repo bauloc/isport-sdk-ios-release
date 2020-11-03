@@ -8,7 +8,6 @@ import Swift
 import WebKit
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ISportView : UIKit.UIView, WebKit.WKScriptMessageHandler, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
   open var mWebView: WebKit.WKWebView!
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
   public func injectJavascript(javascript: Swift.String)
   @objc open func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
   @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
@@ -62,8 +61,7 @@ import WebKit
   @objc public static var onUserPurchase: ((Swift.String) -> ())?
   @objc public static var onUserExchangeLoyalty: ((Swift.UInt32) -> ())?
   @objc public static var onUserStartLiveDetail: ((Swift.String) -> ())?
-  @objc public static func addISportView(container: UIKit.UIView!, frame: CoreGraphics.CGRect, data: ISPORTSDK.ISportData!)
-  @objc public static func setFrame(frame: CoreGraphics.CGRect)
+  @objc public static func addISportView(container: UIKit.UIView!, data: ISPORTSDK.ISportData!)
   @objc public static func onUserPurchaseSuccess()
   @objc public static func onUserPurchaseFailed()
   @objc public static func onUserExchangeLoyaltySuccess()
