@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "ISPORTSDK"
   #spec.version      = ENV['LIB_VERSION'] || "0.0.1"
-  spec.version      = "1.3.4"
+  spec.version      = "1.3.1"
 
   spec.summary      = "ISport Sdk iOS"
 
@@ -23,6 +23,11 @@ Pod::Spec.new do |spec|
   spec.source_files = "ISPORTSDK.framework/Headers/*.h"
   spec.public_header_files = "ISPORTSDK.framework/Headers/*.h"
   spec.vendored_frameworks = "ISPORTSDK.framework"
+
+  spec.pod_target_xcconfig = {
+      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   spec.frameworks = 'AVFoundation', 'UIKit', 'WebKit'
 end
