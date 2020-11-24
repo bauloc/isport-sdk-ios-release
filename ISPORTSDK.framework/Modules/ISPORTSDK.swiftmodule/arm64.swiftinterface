@@ -1,79 +1,43 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ISPORTSDK
-import AVKit
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name ISPORTSDK
 import Foundation
 @_exported import ISPORTSDK
 import Swift
-import WebKit
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ISportView : UIKit.UIView, WebKit.WKScriptMessageHandler, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
-  open var mWebView: WebKit.WKWebView!
-  public func injectJavascript(javascript: Swift.String)
-  @objc open func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
-  @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
-  @objc public func webView(_ webView: WebKit.WKWebView, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
-  @objc public func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
-  @objc public func webViewDidClose(_ webView: WebKit.WKWebView)
-  public func clearAll()
-  @objc deinit
-}
-@objc public class ISportWebAction : ObjectiveC.NSObject {
-  public enum TypeAction : Swift.String {
-    case USER_LOGIN, USER_PURCHASE, USER_EXCHANGE_LOYALTY, USER_START_LIVE_DETAIL, USER_DISMISS, UNKNOWN
-    public typealias RawValue = Swift.String
-    public init?(rawValue: Swift.String)
-    public var rawValue: Swift.String {
+@_hasMissingDesignatedInitializers public class ISportData {
+  public convenience init(matchId: Swift.String, token: Swift.String, type: ISPORTSDK.ISportData.ViewType, env: ISPORTSDK.ISportData.Environment, debug: Swift.Bool)
+  public enum ViewType {
+    case HOME
+    case DETAIL
+    public static func == (a: ISPORTSDK.ISportData.ViewType, b: ISPORTSDK.ISportData.ViewType) -> Swift.Bool
+    public var hashValue: Swift.Int {
       get
     }
+    public func hash(into hasher: inout Swift.Hasher)
   }
-  public init(payload: Swift.String)
-  public func getType() -> ISPORTSDK.ISportWebAction.TypeAction
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc public class ISportData : ObjectiveC.NSObject {
-  @objc public init(matchId: Swift.String?, token: Swift.String?, type: ISPORTSDK.ISportData.ViewType = ISportData.ViewType.DETAIL, env: ISPORTSDK.ISportData.Environment = ISportData.Environment.PRODUCTION, debug: Swift.Bool = false)
-  @objc public enum Environment : Swift.Int, Swift.RawRepresentable {
-    case DEV, STAGING, PRODUCTION
-    public typealias RawValue = Swift.String
-    public var rawValue: ISPORTSDK.ISportData.Environment.RawValue {
+  public enum Environment {
+    case DEV
+    case PRODUCTION
+    public static func == (a: ISPORTSDK.ISportData.Environment, b: ISPORTSDK.ISportData.Environment) -> Swift.Bool
+    public var hashValue: Swift.Int {
       get
     }
-    public init?(rawValue: ISPORTSDK.ISportData.Environment.RawValue)
-  }
-  @objc public enum ViewType : Swift.Int, Swift.RawRepresentable {
-    case HOME, DETAIL
-    public typealias RawValue = Swift.String
-    public var rawValue: ISPORTSDK.ISportData.ViewType.RawValue {
-      get
-    }
-    public init?(rawValue: ISPORTSDK.ISportData.ViewType.RawValue)
+    public func hash(into hasher: inout Swift.Hasher)
   }
   @objc deinit
-  @objc override dynamic public init()
 }
-@objc @_inheritsConvenienceInitializers open class ISPORTSDK : ObjectiveC.NSObject {
-  @objc public static var onTimeout: (() -> ())?
-  @objc public static var onError: (() -> ())?
-  @objc public static var onUserLogin: (() -> ())?
-  @objc public static var onDismiss: (() -> ())?
-  @objc public static var onUserPurchase: ((Swift.String) -> ())?
-  @objc public static var onUserExchangeLoyalty: ((Swift.UInt32) -> ())?
-  @objc public static var onUserStartLiveDetail: ((Swift.String) -> ())?
-  @objc public static func addISportView(container: UIKit.UIView!, data: ISPORTSDK.ISportData!)
-  @objc public static func onUserPurchaseSuccess()
-  @objc public static func onUserPurchaseFailed()
-  @objc public static func onUserExchangeLoyaltySuccess()
-  @objc public static func onUserExchangeLoyaltyFailed()
-  @objc public static func removeOverlays()
+public class ISPORTSDK {
+  public init()
+  public static var onTimeout: (() -> Swift.Void)?
+  public static var onError: (() -> Swift.Void)?
+  public static var onUserLogin: (() -> Swift.Void)?
+  public static var onDismiss: (() -> Swift.Void)?
+  public static var onUserPurchase: ((Swift.String) -> Swift.Void)?
+  public static var onUserExchangeLoyalty: ((Any) -> Swift.Void)?
+  public static var onUserStartLiveDetail: ((Any) -> Swift.Void)?
+  public class func removeOverlays()
+  public class func addISportView(container: Any?, data: Any?)
+  public class func onUserPurchaseSuccess()
+  public class func onUserPurchaseFailed()
   @objc deinit
-  @objc override dynamic public init()
 }
-extension ISPORTSDK.ISportWebAction.TypeAction : Swift.Equatable {}
-extension ISPORTSDK.ISportWebAction.TypeAction : Swift.Hashable {}
-extension ISPORTSDK.ISportWebAction.TypeAction : Swift.RawRepresentable {}
-extension ISPORTSDK.ISportData.Environment : Swift.Equatable {}
-extension ISPORTSDK.ISportData.Environment : Swift.Hashable {}
-extension ISPORTSDK.ISportData.ViewType : Swift.Equatable {}
-extension ISPORTSDK.ISportData.ViewType : Swift.Hashable {}

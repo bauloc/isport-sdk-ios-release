@@ -2,8 +2,7 @@
 //  ISPORTSDK.h
 //  ISPORTSDK
 //
-//  Created by mcg-corp on 5/28/20.
-//  Copyright © 2020 isport. All rights reserved.
+//  Created by BAU LOC on 24/11/2020.
 //
 
 #import <Foundation/Foundation.h>
