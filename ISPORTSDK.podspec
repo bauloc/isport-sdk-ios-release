@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ISPORTSDK"
-  spec.version      = "0.0.0"
+  spec.version      = "0.0.1"
 
   spec.summary      = "ISport Sdk iOS"
 
